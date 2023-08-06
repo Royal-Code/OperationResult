@@ -1,16 +1,16 @@
 # Docs for OperationResult
 
-Navegue pelos arquivos para ler sobre cada tópico documentado.
+Browse the archives to read about each documented topic.
 
-A documentação é dividida em:
+The documentation is divided into:
 
-- **`ResultaMessage` e `ResultErrors`**: Classes que padronizam as mensagens de erro. Será demonstrado como criá-las.
-- **`ValidableResult`**: Um struct de resultado para cenários de validação, onde pode se adicionar várias mensagens de erro.
-- **`OperationResult`**: Um struct de resultado que pode ser de sucesso ou de falha.
-- **`OperationResult<T>`**: Um struct de resultado que pode ser de sucesso ou falha, contendo um valor de retorno.
-- **Conversões Implicitas**: Serão apresentadas as conversões implicitas entre as classes de mensagem e os structs de resultado.
-- **Resultados para Controllers**: Será demonstrado como converter resultados de operação em objetos de resultado de controllers.
-- **Resultados para Minimal API**: Será demonstrado como converter resultados de operação em objetos de resultado para Minimal API.
-- **Conversões implicitas para Minimal API**: Serão apresentadas as conversões implicitas entre os structs de resultado de operação e resultados de Minimal API.
-- **`ProblemDetails`**: Será demonstrado o suporte para conversão de resultados de operações em `ProblemDetails`.
-- **Extensões para HTTP**: Será demostrado o uso das extensões para respostas de chamadas HTTP, convertendo a resposta em resulado de operação.
+- **`ResultMessage` and `ResultErrors`**: Classes that standardize error messages. It will be demonstrated how to create them.
+- **`ValidableResult`**: A struct of a result for validation scenarios, where you can add several error messages.
+- **`OperationResult`**: A struct of a result that can be a success or a failure.
+- **`OperationResult<T>`**: A struct of a result that can be success or failure, containing a return value.
+- **Implicit Conversions**: Implicit conversions between message classes and result structs will be presented.
+- **Results for Controllers**: It will be demonstrated how to convert operation results into result objects of controllers.
+- **Results for Minimal API**: It will be demonstrated how to convert operation results into result objects for Minimal API.
+- **Implicit conversions for Minimal API**: Implicit conversions between operation result structs and Minimal API results will be presented.
+- **`ProblemDetails`**: Support for converting operation results into `ProblemDetails` will be demonstrated.
+- **Extensions for HTTP**: The use of extensions for HTTP call responses will be demonstrated, converting the response into an operation result.
