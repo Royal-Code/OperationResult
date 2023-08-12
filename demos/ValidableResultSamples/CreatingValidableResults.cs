@@ -29,4 +29,20 @@ public class CreatingValidableResults
 
         return result;
     }
+
+    public ValidableResult Validating(BookDto book)
+    {
+        var result = new ValidableResult();
+
+        if (string.IsNullOrWhiteSpace(book.Title))
+            result += ResultMessage.Error("Title is required");
+
+        if (string.IsNullOrWhiteSpace(book.Author))
+            result += ResultMessage.Error("Author is required");
+
+        if (book.Pages <= 0)
+            result += ResultMessage.Error("Pages must be greater than zero");
+
+        return result;
+    }
 }

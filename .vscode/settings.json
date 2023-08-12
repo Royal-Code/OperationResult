@@ -1,3 +1,4 @@
 {
-    "dotnet.defaultSolution": "demos/OperationResult.Demos.sln"
+    "dotnet.defaultSolution": "demos/OperationResult.Demos.sln",
+    
 }
