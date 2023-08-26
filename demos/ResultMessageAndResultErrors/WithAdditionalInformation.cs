@@ -14,9 +14,9 @@ public class WithAdditionalInformation
 
         // create the message and add extra data
         var message = ResultMessage.Conflict("error-code, Error message", "PropertyName")
-            .WithAdditionInfo("Id", id)
-            .WithAdditionInfo("CurrentValue", value)
-            .WithAdditionInfo("RequiredValue", required);
+            .WithInformation("Id", id)
+            .WithInformation("CurrentValue", value)
+            .WithInformation("RequiredValue", required);
 
         return message;
     }
@@ -28,8 +28,8 @@ public class WithAdditionalInformation
             var message = ResultMessage.Forbidden("out-of-credit", 
                     $"Your current balance is {account.Balance}, but that costs {request.Amount}.", 
                     nameof(PaymentRequest.Amount))
-                .WithAdditionInfo(nameof(Account.Balance), account.Balance)
-                .WithAdditionInfo(nameof(PaymentRequest.Amount), request.Amount);
+                .WithInformation(nameof(Account.Balance), account.Balance)
+                .WithInformation(nameof(PaymentRequest.Amount), request.Amount);
 
             return message;
         }
