@@ -15,12 +15,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".docs", ".docs", "{D41BB926
 		..\docs\1.ResultMessageAndResultErrors.md = ..\docs\1.ResultMessageAndResultErrors.md
 		..\docs\2.ValidableResult.md = ..\docs\2.ValidableResult.md
 		..\docs\3.OperationResult.md = ..\docs\3.OperationResult.md
+		..\docs\4.OperationResult'1.md = ..\docs\4.OperationResult'1.md
 		..\docs\README.md = ..\docs\README.md
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ValidableResultSamples", "ValidableResultSamples\ValidableResultSamples.csproj", "{4A88C519-133F-4AF2-91EC-29DBC5DF6387}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OperationResultSamples", "OperationResultSamples\OperationResultSamples.csproj", "{3D05556E-8213-47AB-A385-687D07768DBD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OperationResultSamples", "OperationResultSamples\OperationResultSamples.csproj", "{3D05556E-8213-47AB-A385-687D07768DBD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
