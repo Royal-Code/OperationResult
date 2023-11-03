@@ -33,6 +33,13 @@ public class Creating
         return result;
     }
 
+    public OperationResult<Product> Create_Success_4()
+    {
+        var product = new Product("Product name", 10.0m);
+
+        return product;
+    }
+
     public OperationResult<Product> Create_Failure_1()
     {
         var errors = new ResultErrors();

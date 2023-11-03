@@ -37,7 +37,7 @@ public class WorkWithValidableResult
     {
         var result = Validate(book);
 
-        return result.Convert((store) => store.Create(book), bookStore);
+        return result.Convert((bookStore, book), static tuple => tuple.bookStore.Create(tuple.book));
     }
 
     public IResult ValidableResult_Match(BookDto book)
@@ -45,8 +45,8 @@ public class WorkWithValidableResult
         var result = Validate(book);
 
         return result.Match(
-            () => Results.Ok("Book is valid"),
-            (errors) => Results.BadRequest(errors));
+            success: () => Results.Ok("Book is valid"),
+            failure: (errors) => Results.BadRequest(errors));
     }
 
     private ValidableResult Validate(BookDto book)
