@@ -8,7 +8,7 @@ The documentation is divided into:
 - **`ValidableResult`**: A struct of a result for validation scenarios, where you can add several error messages.
 - **`OperationResult`**: A struct of a result that can be a success or a failure.
 - **`OperationResult<T>`**: A struct of a result that can be success or failure, containing a return value.
-- **Implicit Conversions**: Implicit conversions between message classes and result structs will be presented.
+- **Implicit Conversions and Operators**: Implicit conversions between message classes and result structs will be presented.
 - **Results for Controllers**: It will be demonstrated how to convert operation results into result objects of controllers.
 - **Results for Minimal API**: It will be demonstrated how to convert operation results into result objects for Minimal API.
 - **Implicit conversions for Minimal API**: Implicit conversions between operation result structs and Minimal API results will be presented.
