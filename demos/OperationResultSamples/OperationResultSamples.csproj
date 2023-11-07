@@ -11,6 +11,7 @@
 		<FrameworkReference Include="Microsoft.AspNetCore.App" />
 		<PackageReference Include="RoyalCode.OperationResult" Version="$(OpReVer)" />
 		<PackageReference Include="RoyalCode.OperationResult.MvcResults" Version="$(OpReVer)" />
+		<PackageReference Include="RoyalCode.OperationResult.ApiResults" Version="$(OpReVer)" />
 	</ItemGroup>
 
 </Project>
