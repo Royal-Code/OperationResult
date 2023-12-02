@@ -1,0 +1,19 @@
+[
+    {
+      "code": "insufficient-credits",
+      "title": "Insufficient credits",
+      "description": "The partner does not have sufficient credits to obtain the required benefit."
+    },
+    {
+      "code": "size-out-of-bounds",
+      "title": "Size out of bounds",
+      "description": "The size of all the items is above the capacity of the container.",
+      "type": "https://example.com/probs/size-out-of-bounds"
+    },
+    {
+      "code": "dependencies-not-found",
+      "title": "Dependencies not found",
+      "description": "One or more dependent records were not found",
+      "status": 422
+    }
+  ]
