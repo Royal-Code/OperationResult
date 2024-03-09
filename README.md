@@ -18,6 +18,7 @@ The **OperationResult** library is an essential component for handling the retur
 - **Monad aspect**: The `OperationResult` encapsulates the value or collection of errors depending on whether the result is success or failure. To work with these values, there are methods to extract or convert them.
 
 ## How to use
+
 It is simple to start using the **OperationResult** library in your project:
 
 1) Install the NuGet package: `dotnet add package RoyalCode.OperationResult`.
@@ -40,3 +41,26 @@ public OperationResult<MyModel> DoSomething(string input)
 }
 ```
 
+4 - You can also return an `OperationResult` in Minimal APIs,
+where there are implicit converters for `IResult`:
+
+```cs
+// MapPost("/products")
+public static async Task<CreatedMatch<Product>> Create(
+    ProductDto productDto /* FromBody */,
+    IProductService productService /* FromServices */)
+{
+    OperationResult<Product> result = await productService.CreateProductAsync(productDto);
+
+    return result.CreatedMatch(result, p => $"products/{p.Id}");
+}
+```
+
+5 - You can also convert an `HttpResponseMessage` to an `OperationResult`:
+
+```cs
+var response = await client.GetAsync("api/products/1");
+OperationResult<ProductDto> result = await response.ToOperationResultAsync<ProductDto>();
+```
+
+See more details in the [documentation](./docs/README.md).
