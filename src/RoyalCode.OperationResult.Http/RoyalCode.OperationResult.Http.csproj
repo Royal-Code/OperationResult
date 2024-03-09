@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<Import Project="..\libs.targets" />
+
+	<PropertyGroup>
+		<Version>$(OpResVer)$(OpResPreview)</Version>
+		<AssemblyVersion>$(OpResVer)</AssemblyVersion>
+		<FileVersion>$(OpResVer)</FileVersion>
+		<Description>
+			Extension methods for deserialize operations results objects from http responses.
+		</Description>
+		<PackageTags>RoyalCode Enterprise-Patterns Operation-Result Operation-Result-Pattern</PackageTags>
+		<RootNamespace>RoyalCode.OperationResults</RootNamespace>
+	</PropertyGroup>
+
+	<!-- when target is netstandard2.1 then add the System.Net.Http.Json package -->
+	<ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.1' ">
+		<PackageReference Include="System.Net.Http.Json" Version="6.0.0" />
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\RoyalCode.OperationResult.Serialization\RoyalCode.OperationResult.Serialization.csproj" />
+	</ItemGroup>
+
+</Project>

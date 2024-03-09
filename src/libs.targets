@@ -1,0 +1,6 @@
+<Project>
+	<PropertyGroup>
+		<TargetFrameworks>netstandard2.1;net6;net7;net8</TargetFrameworks>
+	</PropertyGroup>
+	<Import Project=".\base.targets" />
+</Project>

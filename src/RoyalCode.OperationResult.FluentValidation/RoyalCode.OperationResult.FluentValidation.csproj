@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<Import Project="..\libs.targets" />
+
+	<PropertyGroup>
+		<Version>$(OpResVer)$(OpResPreview)</Version>
+		<AssemblyVersion>$(OpResVer)</AssemblyVersion>
+		<FileVersion>$(OpResVer)</FileVersion>
+		<Description>
+			Extension methods for adapt fluent validation results into operation results.
+		</Description>
+		<PackageTags>RoyalCode Enterprise-Patterns Operation-Result Operation-Result-Pattern FluentValidation</PackageTags>
+		<RootNamespace>RoyalCode.OperationResults</RootNamespace>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="FluentValidation" Version="11.4.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\RoyalCode.OperationResult\RoyalCode.OperationResult.csproj" />
+	</ItemGroup>
+
+</Project>

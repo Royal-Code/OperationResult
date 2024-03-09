@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net8</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<RootNamespace>RoyalCode.OperationResults.TestApi</RootNamespace>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <Content Remove="problem-details.json" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Include="problem-details.json">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.0" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\RoyalCode.OperationResult.ApiResults\RoyalCode.OperationResult.ApiResults.csproj" />
+		<ProjectReference Include="..\RoyalCode.OperationResult.MvcResults\RoyalCode.OperationResult.MvcResults.csproj" />
+	</ItemGroup>
+
+</Project>

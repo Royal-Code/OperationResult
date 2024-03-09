@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<Import Project="..\tests.targets" />
+
+	<PropertyGroup>
+		<RootNamespace>RoyalCode.OperationResults.Tests</RootNamespace>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Remove="appsettings.json" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Include="appsettings.json">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	  </Content>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\RoyalCode.OperationResult.TestApi\RoyalCode.OperationResult.TestApi.csproj" />
+	  <ProjectReference Include="..\RoyalCode.OperationResult.Http\RoyalCode.OperationResult.Http.csproj" />
+	  <ProjectReference Include="..\RoyalCode.OperationResult.ProblemDetails\RoyalCode.OperationResult.ProblemDetails.csproj" />
+	  <ProjectReference Include="..\RoyalCode.OperationResult.Serialization\RoyalCode.OperationResult.Serialization.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="problem-details.json">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
+
+</Project>

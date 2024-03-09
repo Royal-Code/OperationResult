@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<Import Project="..\libs.targets" />
+
+	<PropertyGroup>
+		<Version>$(OpResVer)$(OpResPreview)</Version>
+		<AssemblyVersion>$(OpResVer)</AssemblyVersion>
+		<FileVersion>$(OpResVer)</FileVersion>
+		<Description>
+			Implementation for the Operation Result Pattern.
+		</Description>
+		<PackageTags>RoyalCode Enterprise-Patterns Operation-Result Operation-Result-Pattern</PackageTags>
+		<RootNamespace>RoyalCode.OperationResults</RootNamespace>
+		
+		<!-- when target is netstandard2.1 then remove waring cs8604 -->
+		<NoWarn Condition=" '$(TargetFramework)' == 'netstandard2.1' ">$(NoWarn);CS8604;CS8602</NoWarn>
+		
+	</PropertyGroup>
+
+	<!-- when target is netstandard2.1 then add the System.Text.Json package -->
+	<ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.1' ">
+		<PackageReference Include="System.Text.Json" Version="6.0.0" />
+		<PackageReference Include="System.Collections.Immutable" Version="6.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Update="R.Designer.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>R.resx</DependentUpon>
+		</Compile>
+	</ItemGroup>
+	<ItemGroup>
+		<EmbeddedResource Update="R.resx">
+			<Generator>ResXFileCodeGenerator</Generator>
+			<LastGenOutput>R.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+	</ItemGroup>
+
+</Project>
