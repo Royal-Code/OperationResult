@@ -1,5 +1,5 @@
 <Project>
 	<PropertyGroup>
-		<OpReVer>2.0.0-rc9.14</OpReVer>
+		<OpReVer>2.0.0</OpReVer>
 	</PropertyGroup>
 </Project>
