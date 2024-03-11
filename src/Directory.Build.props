@@ -5,19 +5,7 @@
 	</PropertyGroup>
 	<PropertyGroup>
 		<OpResVer>2.0.0</OpResVer>
-		<OpResPreview>-rc9.15</OpResPreview>
-		
-		<SearchesVer>1.0.0</SearchesVer>
-		<SearchesPreview>-preview-4.0</SearchesPreview>
-		
-		<DomainVer>1.0.0</DomainVer>
-		<DomainPreview>-preview-4.0</DomainPreview>
-		
-		<PersistVer>1.0.0</PersistVer>
-		<PersistPreview>-preview-4.0</PersistPreview>
-		
-		<CommandVer>0.1.0</CommandVer>
-		<CommandPreview>-preview-1</CommandPreview>
+		<OpResPreview></OpResPreview>
 	</PropertyGroup>
 	<PropertyGroup>
 		<DotNetCoreVersion Condition="'$(TargetFramework)' == 'net6'">6.0.0</DotNetCoreVersion>
