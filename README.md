@@ -41,8 +41,7 @@ public OperationResult<MyModel> DoSomething(string input)
 }
 ```
 
-4 - You can also return an `OperationResult` in Minimal APIs,
-where there are implicit converters for `IResult`:
+4 - You can also return an `OperationResult` in minimal APIs, using methods for converting to `IResult`:
 
 ```cs
 // MapPost("/products")
@@ -52,11 +51,26 @@ public static async Task<CreatedMatch<Product>> Create(
 {
     OperationResult<Product> result = await productService.CreateProductAsync(productDto);
 
-    return result.CreatedMatch(result, p => $"products/{p.Id}");
+    return result.CreatedMatch(p => $"products/{p.Id}");
 }
 ```
 
-5 - You can also convert an `HttpResponseMessage` to an `OperationResult`:
+5 - There are implicit conversions for the **'Match'** types in the library, such as the example for `OkMatch<T>`:
+
+```cs
+// MapGet("/products/{id}")
+public static OkMatch<Product> Get(int id, IProductService productService)
+{
+    Product? product = productService.Find(id);
+
+    if (product is null)
+        return ResultMessage.NotFound("Product not found", nameof(id));
+
+    return product;
+}
+```
+
+6 - You can also convert an `HttpResponseMessage` to an `OperationResult`:
 
 ```cs
 var response = await client.GetAsync("api/products/1");
