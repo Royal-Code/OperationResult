@@ -1,0 +1,46 @@
+# This workflow will build a .NET project
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
+
+name: operation-result-nuget
+
+on:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.0.x'
+          include-prerelease: true
+
+      - name: Build and pack OperationResult
+        run: sudo dotnet build ./src/RoyalCode.OperationResult/RoyalCode.OperationResult.csproj -c Release
+      
+      - name: Build and pack Serialization
+        run: sudo dotnet build ./src/RoyalCode.OperationResult.Serialization/RoyalCode.OperationResult.Serialization.csproj -c Release
+      
+      - name: Build and pack ProblemDetails
+        run: sudo dotnet build ./src/RoyalCode.OperationResult.ProblemDetails/RoyalCode.OperationResult.ProblemDetails.csproj -c Release
+        
+      - name: Build and pack ApiResults
+        run: sudo dotnet build ./src/RoyalCode.OperationResult.ApiResults/RoyalCode.OperationResult.ApiResults.csproj -c Release
+
+      - name: Build and pack MvcResults
+        run: sudo dotnet build ./src/RoyalCode.OperationResult.MvcResults/RoyalCode.OperationResult.MvcResults.csproj -c Release
+        
+      - name: Build and pack Http
+        run: sudo dotnet build ./src/RoyalCode.OperationResult.Http/RoyalCode.OperationResult.Http.csproj -c Release
+      
+      - name: Build and pack FluentValidation
+        run: sudo dotnet build ./src/RoyalCode.OperationResult.FluentValidation/RoyalCode.OperationResult.FluentValidation.csproj -c Release
+        
+      - name: Publish
+        run: sudo dotnet nuget push ./**/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json

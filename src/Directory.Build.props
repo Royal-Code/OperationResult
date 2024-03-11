@@ -5,7 +5,7 @@
 	</PropertyGroup>
 	<PropertyGroup>
 		<OpResVer>2.0.0</OpResVer>
-		<OpResPreview></OpResPreview>
+		<OpResPreview>-rc-9.20</OpResPreview>
 	</PropertyGroup>
 	<PropertyGroup>
 		<DotNetCoreVersion Condition="'$(TargetFramework)' == 'net6'">6.0.0</DotNetCoreVersion>

@@ -31,6 +31,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".items", ".items", "{4643F6
 		base.targets = base.targets
 		Directory.Build.props = Directory.Build.props
 		libs.targets = libs.targets
+		..\.github\workflows\operation-result.yml = ..\.github\workflows\operation-result.yml
 		tests.targets = tests.targets
 	EndProjectSection
 EndProject
