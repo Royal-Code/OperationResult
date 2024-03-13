@@ -3,9 +3,6 @@
 	<Import Project="..\libs.targets" />
 
 	<PropertyGroup>
-		<Version>$(OpResVer)$(OpResPreview)</Version>
-		<AssemblyVersion>$(OpResVer)</AssemblyVersion>
-		<FileVersion>$(OpResVer)</FileVersion>
 		<Description>
 			Extension methods for deserialize operations results objects from http responses.
 		</Description>

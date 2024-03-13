@@ -7,6 +7,8 @@ using RoyalCode.OperationResults.Interceptors;
 
 namespace RoyalCode.OperationResults.Tests;
 
+#pragma warning disable ASP0019 // Suggest using IHeaderDictionary.Append or the indexer
+
 public class InterceptorsTest
 {
     public InterceptorsTest()

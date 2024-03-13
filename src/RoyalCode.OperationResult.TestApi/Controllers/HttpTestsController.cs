@@ -7,7 +7,7 @@ namespace RoyalCode.OperationResults.TestApi.Controllers;
 public class HttpTestsController : ControllerBase
 {
     [HttpGet]
-    public async Task<IActionResult> GetTextBadRequest()
+    public IActionResult GetTextBadRequest()
     {
         return BadRequest("Erro ao obter valores simples.");
     }

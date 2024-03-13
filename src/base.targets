@@ -12,9 +12,16 @@
 		<Configurations>Debug;Release</Configurations>
 		<PackageIcon>icon.png</PackageIcon>
 		<PackageLicenseExpression>AGPL-3.0-only</PackageLicenseExpression>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+	</PropertyGroup>
+	<PropertyGroup>
+		<Version>$(OpResVer)$(OpResPreview)</Version>
+		<AssemblyVersion>$(OpResVer)</AssemblyVersion>
+		<FileVersion>$(OpResVer)</FileVersion>
 	</PropertyGroup>
 	<ItemGroup>
 		<None Include="../icon.png" Pack="true" PackagePath="/"/>
+		<None Include="../README.md" Pack="true" PackagePath="/"/>
 	</ItemGroup>
 	<PropertyGroup>
 		<DotNetCoreVersion Condition="'$(TargetFramework)' == 'net6'">6.0.0</DotNetCoreVersion>

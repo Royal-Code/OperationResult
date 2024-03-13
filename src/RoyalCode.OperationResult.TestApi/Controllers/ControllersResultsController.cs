@@ -9,7 +9,7 @@ public class ControllersResultsController : ControllerBase
 {
 
     [HttpGet]
-    public async Task<IActionResult> GetSimpleValues()
+    public IActionResult GetSimpleValues()
     {
         // cria novo resultado de sucesso a partir do resultado.
         OperationResult<SimpleValues> result = new SimpleValues();
@@ -18,7 +18,7 @@ public class ControllersResultsController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<IActionResult> GetSimpleValuesWithCreatedPath()
+    public IActionResult GetSimpleValuesWithCreatedPath()
     {
         // cria novo resultado de sucesso a partir do resultado.
         OperationResult<SimpleValues> result = new SimpleValues();
@@ -27,7 +27,7 @@ public class ControllersResultsController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<IActionResult> GetSimpleValuesWithError()
+    public IActionResult GetSimpleValuesWithError()
     {
         // cria novo resultado de erro a partir do resultado.
         OperationResult<SimpleValues> result = ResultMessage.Error("Erro ao obter valores simples.");
@@ -36,7 +36,7 @@ public class ControllersResultsController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<IActionResult> GetSimpleValuesWithErrorWithCreatedPath()
+    public ActionResult GetSimpleValuesWithErrorWithCreatedPath()
     {
         // cria novo resultado de erro a partir do resultado.
         OperationResult<SimpleValues> result = ResultMessage.Error("Erro ao obter valores simples.");
@@ -45,7 +45,7 @@ public class ControllersResultsController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<IActionResult> GetSimpleValuesWithCreatedPathAndFormat()
+    public IActionResult GetSimpleValuesWithCreatedPathAndFormat()
     {
         // cria novo resultado de sucesso a partir do resultado.
         OperationResult<SimpleValues> simpleResult = new SimpleValues();
@@ -56,7 +56,7 @@ public class ControllersResultsController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<IActionResult> GetSimpleValuesWithCreatedPathProvider()
+    public IActionResult GetSimpleValuesWithCreatedPathProvider()
     {
         // cria novo resultado de sucesso a partir do resultado.
         OperationResult<SimpleValues> simpleResult = new SimpleValues();
@@ -65,7 +65,7 @@ public class ControllersResultsController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<IActionResult> GetSimpleValuesWithErrorWithCreatedPathAndFormat()
+    public IActionResult GetSimpleValuesWithErrorWithCreatedPathAndFormat()
     {
         // cria novo resultado de erro a partir do resultado.
         OperationResult<SimpleValues> simpleResult = ResultMessage.Error("Erro ao obter valores simples.");
@@ -76,7 +76,7 @@ public class ControllersResultsController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<IActionResult> GetSimpleValuesIfValidInput([FromQuery] string? error)
+    public IActionResult GetSimpleValuesIfValidInput([FromQuery] string? error)
     {
         ValidableResult result = new();
 
@@ -91,7 +91,7 @@ public class ControllersResultsController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<IActionResult> ValidableResult([FromQuery] string? input)
+    public IActionResult ValidableResult([FromQuery] string? input)
     {
         ValidableResult result = new();
 
@@ -104,7 +104,7 @@ public class ControllersResultsController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<IActionResult> GetSimpleValuesWithException()
+    public IActionResult GetSimpleValuesWithException()
     {
         var Exception = new Exception("Erro ao obter valores simples.");
         OperationResult<SimpleValues> result = ResultMessage.Error(Exception);

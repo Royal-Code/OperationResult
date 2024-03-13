@@ -3,9 +3,6 @@
 	<Import Project="..\asp.targets" />
 
 	<PropertyGroup>
-		<Version>$(OpResVer)$(OpResPreview)</Version>
-		<AssemblyVersion>$(OpResVer)</AssemblyVersion>
-		<FileVersion>$(OpResVer)</FileVersion>
 		<Description>
 			Extensions methods for adapt operations results objects to problem details.
 		</Description>

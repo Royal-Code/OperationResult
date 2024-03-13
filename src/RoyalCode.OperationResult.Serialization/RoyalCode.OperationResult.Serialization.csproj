@@ -3,9 +3,6 @@
 	<Import Project="..\libs.targets" />
 
 	<PropertyGroup>
-		<Version>$(OpResVer)$(OpResPreview)</Version>
-		<AssemblyVersion>$(OpResVer)</AssemblyVersion>
-		<FileVersion>$(OpResVer)</FileVersion>
 		<Description>
 			Implementation for the Operation Result Pattern.
 		</Description>
@@ -13,8 +10,7 @@
 		
 		<RootNamespace>RoyalCode.OperationResults</RootNamespace>
 
-		<NoWarn>$(NoWarn);SYSLIB0012;SYSLIB0005</NoWarn>
-		<NoWarn Condition=" '$(TargetFramework)' == 'netstandard2.1' ">$(NoWarn);CS1591</NoWarn>
+		<NoWarn>$(NoWarn);SYSLIB0012;SYSLIB0005;CS1591;</NoWarn>
 	</PropertyGroup>
 
 	<!-- when target is netstandard2.1 then add the System.Text.Json package -->
