@@ -1,12 +1,9 @@
 ﻿namespace RoyalCode.OperationResults;
 
-#pragma warning disable S3925 // "ISerializable" should be implemented correctly
-
 /// <summary>
 /// Exception thrown when a collection of <see cref="ProblemDetailsDescription"/> cannot be deserialized.
 /// </summary>
 public sealed class ProblemDetailsDescriptorDeserializationException : Exception
-
 {
     private const string MessagePattern = 
         "Failed to deserialize a collection of ProblemDetailsDescription, type '{0}', message: {1}, JSON:\n{2}";
